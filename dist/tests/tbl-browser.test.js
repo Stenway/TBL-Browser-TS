@@ -1,13 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const tbl_1 = require("@stenway/tbl");
-const src_1 = require("../src");
+import { TblDocument } from "@stenway/tbl";
+import { TblDownload } from "../src/tbl-browser.js";
 test("TblDownload.getDownloadUrl", () => {
-    const document = new tbl_1.TblDocument(["Column1", "Column2"]);
-    src_1.TblDownload.getDownloadUrl(document);
+    const document = new TblDocument(["Column1", "Column2"]);
+    TblDownload.getDownloadUrl(document);
 });
 test("TblDownload.download", () => {
-    const document = new tbl_1.TblDocument(["Column1", "Column2"]);
-    expect(() => src_1.TblDownload.download(document, "File.txt")).toThrowError();
+    const document = new TblDocument(["Column1", "Column2"]);
+    expect(() => TblDownload.download(document, "File.txt")).toThrowError();
 });
 //# sourceMappingURL=tbl-browser.test.js.map

@@ -1,13 +1,10 @@
-"use strict";
 /* (C) Stefan John / Stenway / SimpleML.com / 2023 */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.TblDownload = void 0;
-const reliabletxt_1 = require("@stenway/reliabletxt");
+import { ReliableTxtDocument } from "@stenway/reliabletxt";
 // ----------------------------------------------------------------------
-class TblDownload {
+export class TblDownload {
     static getDownloadUrl(document) {
         const str = document.toString();
-        const bytes = new reliabletxt_1.ReliableTxtDocument(str, document.encoding).getBytes();
+        const bytes = new ReliableTxtDocument(str, document.encoding).getBytes();
         const blob = new Blob([bytes], { type: 'text/plain' });
         return URL.createObjectURL(blob);
     }
@@ -22,5 +19,4 @@ class TblDownload {
         document.body.removeChild(element);
     }
 }
-exports.TblDownload = TblDownload;
 //# sourceMappingURL=tbl-browser.js.map
