@@ -4,7 +4,7 @@ import { ReliableTxtDocument } from "@stenway/reliabletxt";
 export class TblDownload {
     static getDownloadUrl(document) {
         const str = document.toString();
-        const bytes = new ReliableTxtDocument(str, document.encoding).getBytes();
+        const bytes = new ReliableTxtDocument(str, document.encoding).toBytes();
         const blob = new Blob([bytes], { type: 'text/plain' });
         return URL.createObjectURL(blob);
     }
