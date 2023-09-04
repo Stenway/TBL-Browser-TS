@@ -9,7 +9,7 @@ export abstract class TblDownload {
 	static getDownloadUrl(document: TblDocument): string {
 		const str: string = document.toString()
 		const bytes: Uint8Array = new ReliableTxtDocument(str, document.encoding).toBytes()
-		const blob: Blob = new Blob([bytes], { type: 'text/plain' })
+		const blob: Blob = new Blob([bytes], { type: 'application/tbl' })
 		return URL.createObjectURL(blob)
 	}
 	

@@ -1,6 +1,6 @@
 {
   "name": "@stenway/tbl-browser",
-  "version": "0.8.0",
+  "version": "1.1.0",
   "type": "module",
   "description": "TBL helper methods for the browser environment",
   "homepage": "https://www.simpleml.com",
@@ -45,7 +45,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@stenway/reliabletxt": "^0.8.0",
-    "@stenway/tbl": "^0.8.0"
+    "@stenway/reliabletxt": "^1.1.0",
+    "@stenway/tbl": "^1.1.1"
   }
 }

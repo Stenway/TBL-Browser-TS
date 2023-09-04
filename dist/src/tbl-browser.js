@@ -5,7 +5,7 @@ export class TblDownload {
     static getDownloadUrl(document) {
         const str = document.toString();
         const bytes = new ReliableTxtDocument(str, document.encoding).toBytes();
-        const blob = new Blob([bytes], { type: 'text/plain' });
+        const blob = new Blob([bytes], { type: 'application/tbl' });
         return URL.createObjectURL(blob);
     }
     static download(tblDocument, fileName) {
